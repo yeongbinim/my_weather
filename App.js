@@ -9,9 +9,12 @@ import Weather from './Weather';
 const API_KEY = "4d4d60726490b7f6cc61139e0a3328f0";
 
 export default class extends React.Component {
-  state = {
-    isLoading : true
-  };
+  constructor(props){
+    super(props);
+    this.state = {
+      isLoading : true
+    };
+  }
   getWeather = async(latitude, longitude) =>{
     const {
       data: {
